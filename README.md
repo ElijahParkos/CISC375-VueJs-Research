@@ -5,12 +5,12 @@ By: Elijah Parkos, Carson Logelin, Benjamin Li, & Andrew Yang
 - Name: Vue.js
 - Current Version: Vue 3.5.34
 - [Vue.js Official Documentation](https://vuejs.org/)
-## Setup Instructions
+## Setup & Run Instructions
 ### Vanilla HTML version
 - Download demo.html from this repository
 - Run the file
 ### Vue.js version
-- Prerequisites: Node.js
+- Prerequisites: VS Code, Node.js
 - In VS Code, install the Vue (Official) package
 - In the VS Code terminal, navigate to the folder you want the project in
 - Run `npm create vue@latest`
