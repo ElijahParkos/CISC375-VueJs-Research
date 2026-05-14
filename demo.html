@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .done {
+            text-decoration:line-through;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #505081;
+            color: white;
+            font-size: 24px;   
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-left: 25vw;
+            margin-right: 25vw;
+            background-color: #0f0e47;
+            height: 100%;
+            min-height:100vh;
+        }
+
+        form {
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+
+        #task-input {
+            margin-right: 3px;
+        }
+
+        #filter-btn {
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #0f0e47;
+            border: solid 1px #505081;
+            border-radius: 15px;
+            color: white;
+            padding: 5px;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #505081;
+        }
+
+        .delete-task {
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form>
+            <input type="text" required id="task-input">
+            <button id="task-btn">Add Task</button>
+        </form>
+        <ul id="task-list"></ul>
+        <button id="filter-btn">Hide Completed</button>
+    </div>
+</body>
+
+
+<script>
+    const task_btn = document.querySelector("#task-btn");
+    task_btn.addEventListener('click', add_task);
+    const input = document.querySelector("#task-input");
+    input.addEventListener('keydown', () => {
+        if(event.key==='enter') add_task();
+    });
+    const filter_btn = document.querySelector("#filter-btn");
+    filter_btn.addEventListener('click',filter_toggle);
+
+    let tasks = [];
+    let task_id = 0;
+    let filter = false;
+
+    function add_task() {
+        const text_content = input.value;
+        if(text_content==='') return;
+        event.preventDefault();
+        input.value = '';
+
+        task = {
+            id: task_id,
+            name: text_content,
+            completed: false
+        };
+
+        task_id++;
+        tasks.push(task);
+        render_tasks();
+    }
+
+
+    function render_tasks() {
+        const list = document.querySelector("#task-list");
+        list.innerHTML = "";
+
+        for(const t of tasks) {
+            if(filter && t.completed) continue;
+            const task = document.createElement('li');
+            task.dataset.id = t.id;
+
+            const check = document.createElement('input');
+            check.type = 'checkbox';
+            check.id = `check-${t.id}`;
+            check.checked = t.completed;
+            task.appendChild(check);
+
+            const span = document.createElement('span');
+            span.textContent = t.name;
+            span.id = `span-${t.id}`;
+            if(t.completed) span.classList.add("done");
+            task.appendChild(span);
+
+            const btn = document.createElement('button');
+            btn.textContent = "Delete Task";
+            btn.id = `btn-${t.id}`;
+            btn.classList.add('delete-task');
+            task.appendChild(btn);
+
+
+            btn.addEventListener('click', ()=>{delete_task(task);});
+            check.addEventListener('input', ()=>{toggle_complete(task);});
+            list.appendChild(task); 
+        }
+
+
+        
+    }
+
+    function toggle_complete(element) {
+        const id = parseInt(element.dataset.id);
+        let task = tasks.find(t => t.id == id);
+        const span = document.querySelector(`#span-${id}`);
+        if (task.completed == false) {
+            task.completed = true;
+            span.classList.add("done");
+        } else {
+            span.classList.remove("done");
+            task.completed = false;
+        }
+        render_tasks();
+    }
+
+    function delete_task(element) {
+        const id = parseInt(element.dataset.id);
+        tasks = tasks.filter(t => t.id!==id);
+        render_tasks();
+    }
+
+    function filter_toggle() {
+        if(filter) {
+            filter_btn.textContent = "Hide Completed";
+        } else {
+            filter_btn.textContent = "Show Completed";
+        }
+        filter = !filter;
+        render_tasks();
+    }
+    
+
+</script>
+</html>
