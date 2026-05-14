@@ -2,10 +2,11 @@
 CISC375 Web Framework Research Presentation. <br />
 By: Elijah Parkos, Carson Logelin, Benjamin Li, & Andrew Yang
 ## Framework Information
-- Name and version
-- Official documentation link
+- Name: Vue.js
+- Current Version: Vue 3 
+- [Vue.js Official Documentation](https://vuejs.org/)
 ## Setup Instructions
-- Prerequisites (Node.js, Python, etc.)
+- Prerequisites: HTML, CSS, Javascript, & Node.js
 - Installation steps
 - How to run the demo
 ## Features Implemented
