@@ -3,7 +3,7 @@ CISC375 Web Framework Research Presentation. <br />
 By: Elijah Parkos, Carson Logelin, Benjamin Li, & Andrew Yang
 ## Framework Information
 - Name: Vue.js
-- Current Version: Vue 3 
+- Current Version: Vue 3.5.34
 - [Vue.js Official Documentation](https://vuejs.org/)
 ## Setup Instructions
 ### Vanilla HTML version
