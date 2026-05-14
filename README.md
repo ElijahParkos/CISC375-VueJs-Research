@@ -15,7 +15,10 @@ By: Elijah Parkos, Carson Logelin, Benjamin Li, & Andrew Yang
 - [x] Mark complete
 - [x] Delete task
 ## What We Learned
-- Key concepts that were new
+- Single File Components combines HTML, JavaScript, and CSS into one fil, which improves organization compared to separating HTML, CSS, and JavaScript into multiple files.
+- Vue uses a Virtual DOM to efficiently update only the parts of the page that changed, improving performance compared to manually manipulating the DOM.
+- Event Handling is simplified for handling user interactions with directives like @click.
+- With Reactive Data Binding, Vue automatically updates the UI when data changes using reactive variables than manually updating the HTML using document.getElementById().​
 ## Group Contributions
 - Elijah Parkos: [Specific contributions]
 - Carson Logelin: [Specific contributions]
