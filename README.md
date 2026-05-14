@@ -47,10 +47,11 @@ By: Elijah Parkos, Carson Logelin, Benjamin Li, & Andrew Yang
 [4] Miral Kumbhani. 2024. Why Netflix Ditched React.js for Faster Speeds (And How It Worked Wonders!). *Medium*. Retrieved May 7, 2026 from https://medium.com/@miralkumbhani/why-netflix-ditched-react-js-for-faster-speeds-and-how-it-worked-wonders-188ba90b75e2 <br />
 [5] Mirror Review. 2025. Why Businesses Are Migrating to Vue.js in 2025. *Mirror Review*. Retrieved May 7, 2026 from https://www.mirrorreview.com/vue-js-in-2025/ <br />
 [6] Wikipedia. 2020. Vue.js. *Wikipedia*. Retrieved May 7, 2026 from https://en.wikipedia.org/wiki/Vue.js <br />
-
-
-
-
+[7]Evan You. 2014. Vue.js. *Vuejs.org*. Retrieved May 14, 2026 from https://vuejs.org/ <br />
+[8]Wikipedia. 2018. Netflix. *Wikipedia*. Retrieved May 14, 2026 from https://en.wikipedia.org/wiki/Netflix <br />
+[9]Wikipedia. 2019. Alibaba Group. *Wikipedia*. Retrieved May 14, 2026 from https://en.wikipedia.org/wiki/Alibaba_Group <br />
+[10]Wikipedia. 2019. Nintendo. *Wikipedia*. Retrieved May 14, 2026 from https://en.wikipedia.org/wiki/Nintendo <br />
+[11]Wikipedia. 2019. Xiaomi. *Wikipedia*. Retrieved May 14, 2026 from https://en.wikipedia.org/wiki/Xiaomi <br />
 
 
 
