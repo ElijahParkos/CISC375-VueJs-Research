@@ -6,22 +6,38 @@ By: Elijah Parkos, Carson Logelin, Benjamin Li, & Andrew Yang
 - Current Version: Vue 3 
 - [Vue.js Official Documentation](https://vuejs.org/)
 ## Setup Instructions
-- Prerequisites: HTML, CSS, Javascript, & Node.js
-- Installation steps
-- How to run the demo
+### Vanilla HTML version
+- Download demo.html from this repository
+- Run the file
+### Vue.js version
+- Prerequisites: Node.js
+- In VS Code, install the Vue (Official) package
+- In the VS Code terminal, navigate to the folder you want the project in
+- Run `npm create vue@latest`
+- If it asks to install packages, type y
+- When it asks for a project name, type in your project name
+- For the rest of the settings, you can choose "no" or leave everything unselected
+- Download App.vue from this repository
+- Navigate to the src folder in your project
+- Replace the default App.vue with the one you downloaded
+- If there isn't already an App.vue file in the src folder, simply add the downloaded one into the folder
+- Navigate back into your project folder and type `npm install` into the terminal
+- Type `npm run dev` into the terminal
+- Follow the "Local" link to view the website
 ## Features Implemented
 - [x] Display tasks
 - [x] Add task
 - [x] Mark complete
 - [x] Delete task
+- [x] Hide/show completed tasks 
 ## What We Learned
-- Single File Components combines HTML, JavaScript, and CSS into one fil, which improves organization compared to separating HTML, CSS, and JavaScript into multiple files.
+- Single File Components combines HTML, JavaScript, and CSS into one file, which improves organization compared to separating HTML, CSS, and JavaScript into multiple files.
 - Vue uses a Virtual DOM to efficiently update only the parts of the page that changed, improving performance compared to manually manipulating the DOM.
 - Event Handling is simplified for handling user interactions with directives like @click.
 - With Reactive Data Binding, Vue automatically updates the UI when data changes using reactive variables than manually updating the HTML using document.getElementById().​
 ## Group Contributions
-- Elijah Parkos: [Specific contributions]
-- Carson Logelin: [Specific contributions]
+- Elijah Parkos: Developed vanilla HTML version of the task manager
+- Carson Logelin: Developed Vue.js version of the task manager
 - Benjamin Li: Research Presentation Slides; Core Concepts and Pros & Cons
 - Andrew Yang: Research Presentation Slides; Overview and Industry Adoption.
 ## Resources Used – (use the appropriate ACM format to cite your sources)
